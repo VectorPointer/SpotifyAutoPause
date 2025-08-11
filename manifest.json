@@ -1,0 +1,24 @@
+{
+  "name": "Spotify Auto Pause",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Pausa Spotify cuando otro audio se reproduce en otra pestaña y lo reanuda.",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "*://*.spotify.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
