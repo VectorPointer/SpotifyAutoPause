@@ -30,10 +30,10 @@ console.log('spotifyController.js inyectado');
     return findInShadow(document.body);
   }
 
-  // Inicializa el botón global al cargar el script
-  const btn = getPlayPauseButton();
+  // Elimina la inicialización estática del botón
 
   function isPlaying() {
+    const btn = getPlayPauseButton();
     if (!btn) return false;
     const label = btn.getAttribute('aria-label')?.toLowerCase();
     console.log(label);
@@ -51,6 +51,7 @@ console.log('spotifyController.js inyectado');
     _pausedByExtension: false,
     isPlaying,
     pauseIfNeeded() {
+      const btn = getPlayPauseButton();
       if (!btn) return false;
       if (this.isPlaying()) {
         btn.click();
@@ -64,6 +65,7 @@ console.log('spotifyController.js inyectado');
     },
     resumeIfNeeded() {
       if (this._pausedByExtension) {
+        const btn = getPlayPauseButton();
         if (!btn) return false;
         if (!this.isPlaying()) {
           btn.click();
