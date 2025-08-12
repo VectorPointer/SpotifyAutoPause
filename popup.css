@@ -1,0 +1,102 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f7f7f7 60%, #e3fcec 100%);
+  margin: 0;
+  padding: 0;
+  color: #222;
+  min-width: 280px;
+}
+
+.popup-container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 24px 18px 18px 18px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #0001, 0 1.5px 6px #1db95422;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #1db95433;
+  background: #fff;
+  border: 2px solid #e3fcec;
+}
+
+h2 {
+  font-size: 1.18em;
+  margin-bottom: 22px;
+  text-align: center;
+  font-weight: 600;
+  color: #1db954;
+  letter-spacing: 0.5px;
+}
+
+
+.description {
+  font-size: 1.04em;
+  color: #222;
+  text-align: center;
+  margin-bottom: 22px;
+  margin-top: 0;
+  line-height: 1.5;
+  font-weight: 500;
+  text-shadow: 0 1px 2px #fff6, 0 0px 0px #000;
+}
+
+.github-btn {
+  display: block;
+  background: linear-gradient(90deg, #24292e 70%, #1db954 100%);
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 1.08em;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #1db95422;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.github-btn:hover {
+  background: linear-gradient(90deg, #1db954 70%, #24292e 100%);
+  box-shadow: 0 4px 16px #1db95433;
+}
+
+
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #232a2f 60%, #1b2e24 100%);
+    color: #eee;
+  }
+  .popup-container {
+    background: #232a2f;
+    box-shadow: 0 4px 24px #0006, 0 1.5px 6px #1db95444;
+    border: 1px solid #1db95422;
+  }
+  .logo {
+    background: #232a2f;
+    border: 2px solid #1db95444;
+    box-shadow: 0 2px 12px #1db95455;
+  }
+  h2 {
+    color: #1db954;
+  }
+  .description {
+    color: #e3fcec;
+    text-shadow: 0 1px 2px #000a, 0 0px 0px #fff;
+  }
+
+}
